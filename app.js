@@ -48,6 +48,7 @@ function calculate() {
         lblResult.innerHTML = "Your number is Wrong";
         lblResult.style.color = 'red';
         lblResult.classList.add('shake');
+
     } else {
         console.log("Your number is Correct");
         lblResult.innerHTML = "Your number is Correct";
@@ -55,11 +56,10 @@ function calculate() {
     }
 }
 
-// Add shake animation
 document.querySelector('input[type="button"]').addEventListener('click', function() {
     let lblResult = document.getElementById("lblResult");
     lblResult.classList.remove('shake');
-    void lblResult.offsetWidth;  // Trigger reflow to restart animation
+    void lblResult.offsetWidth;  
     lblResult.classList.add('shake');
 });
 
